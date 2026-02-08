@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline (Demo)
 
 on:
   push:
@@ -6,14 +6,13 @@ on:
       - main
 
 jobs:
-  deploy:
+  demo:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Terraform Initialization
-        run: terraform init
-
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      - name: CI/CD Pipeline Demo
+        run: |
+          echo "CI/CD pipeline triggered successfully"
+          echo "Terraform deployment step skipped in demo environment"
